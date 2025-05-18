@@ -21,18 +21,21 @@ class ItemWidget extends StatelessWidget {
         ),
         title: Text(
           name,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: const TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
         subtitle: Text(
           email,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         trailing: const Icon(
           Icons.chat_bubble_outline,
         ),
         onTap: () {
-          print("hello world");
           Navigator.pushNamed(context, '/chat');
         },
       ),
